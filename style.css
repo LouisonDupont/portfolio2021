@@ -1,0 +1,219 @@
+/* BASE */
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Work+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap");
+html {
+  font-size: 0.625em;
+  /* fallback IE8+ */
+  font-size: calc(1em * 0.625);
+  /* IE9-IE11 math fixing. See http://bit.ly/1g4X0bX */
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  min-height: 4000px;
+  background-color: black;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove font style on address */
+address {
+  font-style: normal;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* Text meant only for screen readers. */
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+.screen-reader-text:focus {
+  background-color: #eee;
+  clip: auto !important;
+  -webkit-clip-path: none;
+          clip-path: none;
+  color: #444;
+  display: block;
+  font-size: 1em;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
+  /* Above WP toolbar. */
+}
+
+.container {
+  max-width: 120rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* FONT */
+/*
+
+font-family: 'Archivo Black', sans-serif;
+font-family: 'Work Sans', sans-serif;
+
+*/
+/* Header*/
+header {
+  display: flex;
+  top: 0;
+  z-index: 1000;
+  position: sticky;
+  background-color: transparent;
+  color: white;
+  align-items: center;
+  justify-content: space-between;
+  transition: 0.4s;
+  opacity: 0;
+  padding: 3rem;
+}
+header .content_left img {
+  width: 200px;
+}
+header .content_right nav ul {
+  display: flex;
+}
+header .content_right nav ul a {
+  font-family: "Archivo Black", sans-serif;
+  text-decoration: none;
+  color: white;
+  font-size: 3rem;
+  margin-right: 3rem;
+}
+header .content_right nav ul a li {
+  list-style-type: none;
+}
+
+/* BASE */
+.zoom {
+  margin-top: -300px;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+.zoom #elem1 {
+  width: 100%;
+  position: absolute;
+  left: 40%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+.zoom #elem2 {
+  width: 100%;
+  position: absolute;
+  right: 0;
+  z-index: 9;
+}
+
+.zoom::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 600px;
+  z-index: 999;
+  background: linear-gradient(transparent, black);
+}
+
+.cards {
+  padding: 100px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cards article {
+  max-width: 20rem;
+  color: white;
+  display: inline;
+  font-family: "Work Sans", sans-serif;
+}
+
+.box-logo {
+  width: 100%;
+  height: 500px;
+  background-color: white;
+}
+
+/* Footer */

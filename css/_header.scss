@@ -1,0 +1,39 @@
+header {
+    display: flex;
+    top: 0;
+    z-index: 1000;
+    position: sticky;
+    background-color: transparent;
+    color: white;
+    align-items: center;
+    justify-content: space-between;
+    transition: 0.4s;
+    opacity: 0;
+    padding: 3rem;
+
+    .content_left {
+        img {
+            width: 200px;
+        }
+    }
+
+    .content_right {
+        nav {
+            ul {
+                display: flex;
+
+                a {
+                    font-family: 'Archivo Black', sans-serif;
+                    text-decoration: none;
+                    color: white;
+                    font-size: 3rem;
+                    margin-right: 3rem;
+
+                    li {
+                        list-style-type: none;
+                    }
+                }
+            }
+        }
+    }
+}
